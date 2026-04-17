@@ -369,6 +369,9 @@ def main():
         print(f"Best Val Accuracy : {best_val_acc:.1f}%")
     print(f"Model saved to    : {os.path.join(MODEL_DIR, 'emotion_model.pth')}")
     print("=" * 60)
+torch.save(model.state_dict(), os.path.join(MODEL_DIR, "emotion_model.pth"))
+with open(os.path.join(MODEL_DIR, "classes.json"), "w") as f:
+    json.dump(train_dataset.classes, f)
 
 
 if __name__ == "__main__":
