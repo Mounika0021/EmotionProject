@@ -6,3 +6,5 @@ __pycache__/
 # Ignore models and temp files
 *.pth
 cookies.txt
+# Ignore videos
+*.mp4
